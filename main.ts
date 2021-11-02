@@ -8,9 +8,11 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
     info.changeScoreBy(-1)
+    tiles.setTileAt(location, assets.tile`myTile`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     info.changeScoreBy(1)
+    tiles.setTileAt(location, assets.tile`myTile`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
     if (controller.up.isPressed()) {
